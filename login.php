@@ -17,11 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo "<script>
                 localStorage.setItem('rol', '$rol');
+                window.location.href = 'home.php';
               </script>";
+        exit();
 
-        echo "Inicio de sesión exitoso. ¡Bienvenido, $username!";
-        echo "Correo electrónico: $email<br>";
-        echo "Rol: $rol";
     } else {
         echo "Usuario o contraseña incorrectos. Inténtalo de nuevo.";
     }
