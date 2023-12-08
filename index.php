@@ -17,9 +17,9 @@
 			<div class="signup">
 				<form>
 					<label for="chk" aria-hidden="true">Crear cuenta</label>
-					<input type="text" name="txt" placeholder="Usuario" required="">
+					<input type="text" name="txt" placeholder="Username" required="">
 					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Contraseña" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
 					<button>Crear cuenta</button>
 				</form>
 			</div>
@@ -27,8 +27,8 @@
 			<div class="login">
 				<form>
 					<label for="chk" aria-hidden="true">Iniciar sesion</label>
-					<input type="text" name="login_usuario" placeholder="Usuario" required="">
-					<input type="password" name="pswd" placeholder="Contraseña" required="">
+					<input type="text" name="login_usuario" placeholder="Username" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
 					<button>Iniciar sesion</button>
                     
 				</form>
