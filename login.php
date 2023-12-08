@@ -13,6 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $user_data['email'];
         $rol = $user_data['rol'];
 
+        echo "<script>
+                localStorage.setItem('rol', '$rol');
+              </script>";
+
         echo "Inicio de sesión exitoso. ¡Bienvenido, $username!";
         echo "Correo electrónico: $email<br>";
         echo "Rol: $rol";
