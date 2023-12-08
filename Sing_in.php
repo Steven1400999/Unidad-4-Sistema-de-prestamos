@@ -6,7 +6,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $query = "INSERT INTO `users`(`username`, `password`, `email`, `rol`) VALUES ('$username', '$password', '$email', '2')";
+    $hashed_password = md5($password);
+
+
+    $query = "INSERT INTO `users`(`username`, `password`, `email`, `rol`) VALUES ('$username', '$hashed_password', '$email', '2')";
     $result = $conn->query($query);
 
     if ($result === TRUE) {

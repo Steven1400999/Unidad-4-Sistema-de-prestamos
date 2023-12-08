@@ -4,8 +4,10 @@ include("db_connection.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
+    $hashed_password = md5($password);
 
-    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+
+    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$hashed_password'";
     $result = $conn->query($query);
 
     if ($result->num_rows == 1) {
