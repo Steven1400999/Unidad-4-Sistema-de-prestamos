@@ -6,27 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilos/estilos-index.css">
-  
+    <link rel="stylesheet" type="text/css" href="slide navbar style.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 <body>
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-    <form>
-        <h3>Login</h3>
+<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
 
-        <label for="username">Usuario</label>
-        <input type="text" placeholder="Usuario" id="username">
+			<div class="signup">
+				<form>
+					<label for="chk" aria-hidden="true">Crear cuenta</label>
+					<input type="text" name="txt" placeholder="Usuario" required="">
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Contraseña" required="">
+					<button>Crear cuenta</button>
+				</form>
+			</div>
 
-        <label for="password">Contraseña</label>
-        <input type="password" placeholder="Contraseña" id="password">
-
-        <button>Log In</button>
-        <div class="social">
-
-<p>¡Bienvenido! Estamos aquí para ayudarte a alcanzar tus metas financieras. </p>
+			<div class="login">
+				<form>
+					<label for="chk" aria-hidden="true">Iniciar sesion</label>
+					<input type="text" name="login_usuario" placeholder="Usuario" required="">
+					<input type="password" name="pswd" placeholder="Contraseña" required="">
+					<button>Iniciar sesion</button>
+                    
+				</form>
+			</div>
+	</div>
 
         </div>
     </form>
