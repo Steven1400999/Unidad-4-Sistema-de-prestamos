@@ -17,11 +17,11 @@
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form action="" method="post">
+				<form action="Sing_in.php" method="post">
 					<label for="chk" aria-hidden="true">Crear cuenta</label>
-					<input type="text" name="txt" placeholder="Username" required="">
+					<input type="text" name="username" placeholder="Username" required="">
 					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
+					<input type="password" name="password" placeholder="Password" required="">
 					<button>Crear cuenta</button>
 				</form>
 			</div>
