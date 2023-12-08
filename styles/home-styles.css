@@ -52,7 +52,6 @@
     vertical-align: middle;
 }
 
-/* Ajuste del tamaño del ícono del menú */
 .navbar-toggler-icon {
-    font-size: 20px; /* Tamaño del ícono del menú */
+    font-size: 20px; 
 }
