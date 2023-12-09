@@ -18,7 +18,7 @@
         }
 
         .container {
-            max-width: 600px;
+            max-width: 400px;
             margin: auto;
             background-color: white;
             padding: 30px;
@@ -38,8 +38,10 @@
 <body>
 <?php include 'menu.php'; ?>
 <br>
-
+<center>
     <h2>Buscar Préstamos por Usuario</h2>
+    </center>
+    <br>
     <div class="container">
         <form action="buscar_prestamos.php" method="post">
             <?php
