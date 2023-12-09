@@ -33,6 +33,11 @@
             <a class="nav-link active" aria-current="page" href="home.php">Inicio</a>
           </li>
         </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="lend_index.php">Crear prestamo</a>
+          </li>
+        </ul>
 
       </div>
       <button id="cerrarSesionBtn" class="btn btn-outline-info">Cerrar Sesión</button>
