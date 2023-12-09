@@ -21,7 +21,7 @@
         </ul>
          <ul class="navbar-nav">
          <li class="nav-item" id="revisarPrestamo" style="display: none;" >
-            <a class="nav-link active" aria-current="page" href="lend_index.php">Revisar prestamos</a>
+            <a class="nav-link active" aria-current="page" href="lends_delete.php">Revisar prestamos</a>
           </li>
         </ul>
 
@@ -35,14 +35,10 @@
         });
       </script>
       <script>
-    // Realizar una solicitud al servidor para obtener el rol del usuario
-    // Puedes utilizar fetch o XMLHttpRequest para esto
-
-    // Simulando el valor del rol obtenido del servidor (reemplaza esto por tu lógica)
+   
     const rol = localStorage.getItem('rol');
 
     if (rol === '1') {
-        // Si el rol es 1, mostramos el enlace para crear préstamo
         document.getElementById('crearPrestamo').style.display = 'block';
         document.getElementById('revisarPrestamo').style.display = 'block';
 

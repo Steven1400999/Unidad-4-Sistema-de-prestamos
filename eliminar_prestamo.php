@@ -6,7 +6,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "DELETE FROM money_lendings WHERE id = $prestamo_id";
     
     if ($conn->query($sql) === TRUE) {
-        echo "Préstamo eliminado correctamente.";
+         
+        echo '<script>';
+        echo 'alert("Préstamo eliminado exitosamente.");';
+        echo 'window.location.href = "lends_delete.php";'; 
+        echo '</script>';
     } else {
         echo "Error al eliminar el préstamo: " . $conn->error;
     }
