@@ -6,11 +6,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $capital = $_POST["capital"];
     $percentage = $_POST["percentage"];
     $user_id = $_POST["user_id"];
+    $porcentajefinal;
+
+    $porcentajefinal = $percentage / 100;
 
     $sumatoria = $capital;
 
     for ($i = 1; $i <= $months; $i++) {
-        $sumatoria = $sumatoria + ($sumatoria * $percentage);
+        $sumatoria = $sumatoria + ($sumatoria * $porcentajefinal);
     }
 
     $query = "INSERT INTO `money_lendings`(`month`, `capital`, `percentage`, `total`, `user_id` ) VALUES ('$months', '$capital', '$percentage', '$sumatoria', '$user_id')";
