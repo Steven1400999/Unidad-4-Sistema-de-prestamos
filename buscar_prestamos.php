@@ -27,7 +27,7 @@
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="prestamo-box">';
                     echo "ID del Préstamo: {$row['id']}<br>";
-                    echo "Mes: {$row['month']}<br>";
+                    echo "Meses: {$row['month']}<br>";
                     echo "Capital: {$row['capital']}<br>";
                     echo "Porcentaje de Intereses: {$row['percentage']}%<br>";
                     echo "Total: {$row['total']}<br>";
@@ -41,7 +41,6 @@
                 echo "No se encontraron préstamos para este usuario.";
             }
         }
-            // Cerrar conexión a la base de datos
             $conn->close();
     ?>
 
