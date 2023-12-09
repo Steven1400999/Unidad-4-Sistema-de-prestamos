@@ -20,12 +20,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($query);
 
     if ($result === TRUE) {
-        echo "Prestamo creado exitosamente.";
+       
+        echo '<script>';
+        echo 'alert("Préstamo creado exitosamente.");';
+        echo 'window.location.href = "lend_index.php";'; 
+        echo '</script>';
     } else {
-        echo "Error al realizar el prestamo: " . $conn->error;
+        echo "Error al realizar el préstamo: " . $conn->error;
     }
 } else {
-    // Redireccionar si se intenta acceder directamente a este script sin enviar el formulario
+    
     header("Location: index.html");
     exit();
 }
