@@ -14,6 +14,7 @@ $conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,29 +29,31 @@ $conn->close();
             font-family: Arial, sans-serif;
             margin: 0;
             background-color: #f4f4f4;
-            padding-bottom: 20px; 
+            padding-bottom: 20px;
         }
 
         h1 {
             color: #333;
-            text-align: center; 
-            margin-bottom: 30px; 
+            text-align: center;
+            margin-bottom: 30px;
         }
+
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             margin: 0 auto;
-            max-width: 960px; 
+            max-width: 960px;
         }
+
         .loan-container {
             border: 1px solid #ccc;
             padding: 20px;
             margin-bottom: 20px;
             background-color: #fff;
             border-radius: 5px;
-            width: calc(50% - 20px); 
+            width: calc(50% - 20px);
             display: inline-block;
             margin-right: 20px;
             margin-bottom: 20px;
@@ -63,38 +66,57 @@ $conn->close();
             margin-bottom: 10px;
             max-width: 100%;
         }
+
         @media (max-width: 768px) {
             .loan-container {
                 width: 100%;
                 margin-right: 0;
             }
         }
+
         .container.only-one-chart {
             justify-content: center;
         }
-
-       
     </style>
 
 </head>
+
 <body>
     <?php include 'menu.php'; ?>
     <br>
     <h1>Préstamos</h1>
-<br>
-<div class="container <?php echo count($loans) === 1 ? 'only-one-chart' : ''; ?>"> 
+    <br>
+    <div class="container <?php echo count($loans) === 1 ? 'only-one-chart' : ''; ?>">
         <br>
 
         <?php foreach ($loans as $loan): ?>
             <div class="loan-container">
-                <p>Id del préstamo: <?php echo $loan['id']; ?></p>
-                <p>Mes: <?php echo $loan['month']; ?></p>
-                <p>Capital: <?php echo $loan['capital']; ?></p>
-                <p>Porcentaje de interés: <?php echo $loan['percentage']; ?>%</p>
-                <p>Total: <?php echo $loan['total']; ?></p>
-                <p>Id del usuario: <?php echo $loan['user_id']; ?></p>
+                <p>Id del préstamo:
+                    <?php echo $loan['id']; ?>
+                </p>
+                <p>Mes:
+                    <?php echo $loan['month']; ?>
+                </p>
+                <p>Capital:
+                    <?php echo $loan['capital']; ?>
+                </p>
+                <p>Porcentaje de interés:
+                    <?php echo $loan['percentage']; ?>%
+                </p>
+                <p>Total:
+                    <?php echo $loan['total']; ?>
+                </p>
+                <p>Id del usuario:
+                    <?php echo $loan['user_id']; ?>
+                </p>
 
                 <canvas id="myChart<?php echo $loan['id']; ?>" width="10" height="5"></canvas>
+
+                <!-- Botón de imprimir -->
+                <form method="post" action="generate_pdf.php" target="_blank">
+                    <input type="hidden" name="loan_id" value="<?php echo $loan['id']; ?>">
+                    <button type="submit" class="btn btn-primary">Imprimir</button>
+                </form>
 
                 <?php
                 $months = range(1, $loan['month']);
