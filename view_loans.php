@@ -40,8 +40,10 @@ $conn->close();
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 960px; 
         }
-
         .loan-container {
             border: 1px solid #ccc;
             padding: 20px;
@@ -67,6 +69,11 @@ $conn->close();
                 margin-right: 0;
             }
         }
+        .container.only-one-chart {
+            justify-content: center;
+        }
+
+       
     </style>
 
 </head>
@@ -75,7 +82,7 @@ $conn->close();
     <br>
     <h1>Préstamos</h1>
 <br>
-    <div class="container"> 
+<div class="container <?php echo count($loans) === 1 ? 'only-one-chart' : ''; ?>"> 
         <br>
 
         <?php foreach ($loans as $loan): ?>
