@@ -31,6 +31,13 @@
           </li>
         </ul>
 
+        <ul class="navbar-nav">
+         <li class="nav-item" id="misPrestamos" style="display: none;" >
+            <a class="nav-link active" aria-current="page" href="client_loans_view.php">Mis prestamos</a>
+          </li>
+        </ul>
+
+
       </div>
       <button id="cerrarSesionBtn" class="btn btn-outline-info">Cerrar Sesión</button>
       <script>
@@ -51,6 +58,14 @@
 
 
     }
+
+    if (rol === '2') {
+        document.getElementById('misPrestamos').style.display = 'block';
+        
+
+
+    }
+
 </script>
 
     </div>

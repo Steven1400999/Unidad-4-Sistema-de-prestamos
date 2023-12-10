@@ -14,9 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user_data = $result->fetch_assoc();
         $email = $user_data['email'];
         $rol = $user_data['rol'];
+        $user_id = $user_data['id'];
 
         echo "<script>
                 localStorage.setItem('rol', '$rol');
+                localStorage.setItem('user_id', '$user_id');
                 window.location.href = 'home.php';
               </script>";
         exit();
