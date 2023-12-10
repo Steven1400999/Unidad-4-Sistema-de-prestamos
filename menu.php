@@ -25,6 +25,12 @@
           </li>
         </ul>
 
+        <ul class="navbar-nav">
+         <li class="nav-item" id="estadisticaPrestamo" style="display: none;" >
+            <a class="nav-link active" aria-current="page" href="select_user.php">Estadistícas de prestamos</a>
+          </li>
+        </ul>
+
       </div>
       <button id="cerrarSesionBtn" class="btn btn-outline-info">Cerrar Sesión</button>
       <script>
@@ -41,6 +47,8 @@
     if (rol === '1') {
         document.getElementById('crearPrestamo').style.display = 'block';
         document.getElementById('revisarPrestamo').style.display = 'block';
+        document.getElementById('estadisticaPrestamo').style.display = 'block';
+
 
     }
 </script>
