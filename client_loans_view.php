@@ -20,7 +20,7 @@
         form.appendChild(input);
 
         form.submit();
-        localStorage.setItem('formSubmitted', 'true'); // Set flag to prevent multiple submissions
+        localStorage.setItem('formSubmitted', 'true'); 
     } else {
         console.error('No se encontró user_id en el almacenamiento local o el formulario ya se ha enviado');
     }
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver Préstamos</title>
+    <title>Mis préstamos</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" href="images/icono.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/home-styles.css">
@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
     <?php include 'menu.php'; ?>
     <br>
-    <h1>Préstamos</h1>
+    <h1>Mis préstamos</h1>
 <br>
 
 <div class="container <?php echo count($loans) === 1 ? 'only-one-chart' : ''; ?>"> 
@@ -168,6 +168,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </script>
             </div>
         <?php endforeach; ?>
-    </div> <!-- Cierre del contenedor -->
+    </div> 
 </body>
 </html>
