@@ -38,6 +38,13 @@
         </ul>
 
 
+        <ul class="navbar-nav">
+         <li class="nav-item" id="portada" style="display: none;" >
+            <a class="nav-link active" aria-current="page" href="Portada/index.html">Portada</a>
+          </li>
+        </ul>
+
+
       </div>
       <button id="cerrarSesionBtn" class="btn btn-outline-info">Cerrar Sesión</button>
       <script>
@@ -55,13 +62,15 @@
         document.getElementById('crearPrestamo').style.display = 'block';
         document.getElementById('revisarPrestamo').style.display = 'block';
         document.getElementById('estadisticaPrestamo').style.display = 'block';
+        document.getElementById('portada').style.display = 'block';
 
 
     }
 
     if (rol === '2') {
         document.getElementById('misPrestamos').style.display = 'block';
-        
+        document.getElementById('portada').style.display = 'block';
+
 
 
     }
